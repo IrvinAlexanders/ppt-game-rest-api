@@ -1,0 +1,13 @@
+# Django project dependencies
+Django
+djangorestframework
+django-cors-headers
+django-environ
+
+# Other dependencies
+psycopg2-binary
+
+# Development dependencies
+coverage
+flake8
+flake8-html
