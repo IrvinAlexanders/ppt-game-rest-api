@@ -3,6 +3,7 @@ Django
 djangorestframework
 django-cors-headers
 django-environ
+drf-spectacular
 
 # Other dependencies
 psycopg2-binary
