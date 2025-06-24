@@ -8,6 +8,7 @@ drf-spectacular
 # Other dependencies
 psycopg2-binary
 sentry-sdk[django]
+gunicorn
 
 # Development dependencies
 coverage

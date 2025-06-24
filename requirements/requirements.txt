@@ -41,6 +41,8 @@ flake8==7.2.0
     #   flake8-html
 flake8-html==0.4.3
     # via -r requirements/requirements.in
+gunicorn==23.0.0
+    # via -r requirements/requirements.in
 inflection==0.5.1
     # via drf-spectacular
 iniconfig==2.1.0
@@ -56,7 +58,9 @@ markupsafe==3.0.2
 mccabe==0.7.0
     # via flake8
 packaging==25.0
-    # via pytest
+    # via
+    #   gunicorn
+    #   pytest
 pluggy==1.6.0
     # via pytest
 psycopg2-binary==2.9.10
