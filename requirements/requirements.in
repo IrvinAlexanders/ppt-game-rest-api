@@ -10,5 +10,6 @@ psycopg2-binary
 
 # Development dependencies
 coverage
+pytest
 flake8
 flake8-html

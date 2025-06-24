@@ -1,0 +1,16 @@
+[run]
+source = apps/game
+branch = True
+
+[report]
+omit =
+    config/*
+    */migrations/*
+    */tests/*
+    */__init__.py
+exclude_lines =
+    pragma: no cover
+    if __name__ == .__main__.:
+
+[html]
+directory = coverage_html_report
