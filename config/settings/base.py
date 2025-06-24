@@ -1,6 +1,7 @@
 from pathlib import Path
 import environ
 import os
+import sentry_sdk
 
 
 # Initialize environment variables
@@ -17,6 +18,8 @@ env = environ.Env(
     POSTGRES_USER=(str, 'debug'),
     POSTGRES_PASSWORD=(str, 'debug'),
     DATABASE_URL= (str, ''),
+    SENTRY_DNS=(str, ''),
+    ENABLE_SENTRY=(bool, False),
 )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -92,6 +95,15 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://pypi.org/project/django-cors-headers/
 CORS_ALLOWED_ORIGINS = env('CORS_ALLOWED_ORIGINS')
 CORS_ALLOW_CREDENTIALS = True
+
+# SENTRY
+# ------------------------------------------------------------------------------
+# https://docs.sentry.io/platforms/python/guides/django/
+if env('ENABLE_SENTRY'):
+    sentry_sdk.init(
+        dsn=env('SENTRY_DNS'),
+        send_default_pii=True,
+    )
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
