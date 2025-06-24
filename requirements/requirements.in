@@ -3,11 +3,14 @@ Django
 djangorestframework
 django-cors-headers
 django-environ
+drf-spectacular
 
 # Other dependencies
 psycopg2-binary
+sentry-sdk[django]
 
 # Development dependencies
 coverage
+pytest
 flake8
 flake8-html
